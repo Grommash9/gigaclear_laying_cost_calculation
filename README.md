@@ -1,3 +1,4 @@
+[![wakatime](https://wakatime.com/badge/user/d26cd398-7251-4fd1-a726-fb1f96747ca6/project/2e8bb7d4-a19f-4462-b4c4-1c39aab0d5ae.svg)](https://wakatime.com/badge/user/d26cd398-7251-4fd1-a726-fb1f96747ca6/project/2e8bb7d4-a19f-4462-b4c4-1c39aab0d5ae)
 
 # Gigaclear Laying Cost Calculation
 
