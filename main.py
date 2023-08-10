@@ -1,7 +1,7 @@
 import igraph as ig
 from igraph import Graph
 import sys
-
+import os
 
 def get_length_and_material_info(graph_data: Graph, from_point, to_point):
     path_indices = graph_data.get_shortest_paths(
@@ -43,16 +43,21 @@ rate_cards = {"Rate Card A": {"Cabinet": 1000, "Trench/m (verge)": 50,
               "Rate Card B": {"Cabinet": 1200, "Trench/m (verge)": 40, "Trench/m (road)": 80,
                               "Chamber": 200, "Pot": lambda trench_length: 20 * trench_length}}
 
+if __name__ == '__main__':
+    try:
+        file_path = sys.argv[1]
+    except IndexError:
+        print('Please specify file to with you want to process. Example: python main.py ./task_files/problem.graphml')
+        sys.exit(-1)
 
-try:
-    file_path = sys.argv[1]
-except IndexError:
-    print('Please specify file to with you want to process. Example: python main.py ./task_files/problem.graphml')
-    sys.exit(-1)
+    if not file_path.endswith('.graphml'):
+        raise ValueError('Please use graphml file!')
 
-if not file_path.endswith('.graphml'):
-    raise ValueError('Please use graphml file!')
+    graph_file: Graph = ig.Graph.Read_GraphML(file_path)
 
-graph_file: Graph = ig.Graph.Read_GraphML(file_path)
+    print(count_graph_realisation_price(graph_file))
 
-print(count_graph_realisation_price(graph_file))
+
+def process_file_from_api(file_path_str):
+    target_graph_file: Graph = ig.Graph.Read_GraphML(file_path_str)
+    return count_graph_realisation_price(target_graph_file)
