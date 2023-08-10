@@ -11,7 +11,7 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Устанавливаем переменную окружения для порта
-ENV PORT 2005
+ENV PORT 2000
 
 # Открываем порт в контейнере
 EXPOSE $PORT
