@@ -1,1 +1,16 @@
-pygraphml==2.4.2
+cairocffi==1.6.1
+cffi==1.15.1
+contourpy==1.1.0
+cycler==0.11.0
+fonttools==4.42.0
+igraph==0.10.6
+kiwisolver==1.4.4
+numpy==1.25.2
+packaging==23.1
+Pillow==10.0.0
+pycparser==2.21
+pyparsing==3.0.9
+python-dateutil==2.8.2
+python-igraph==0.10.6
+six==1.16.0
+texttable==1.6.7
